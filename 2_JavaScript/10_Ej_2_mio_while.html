@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>While</title>
+  <meta charset="utf-8"/>
+</head>
+
+<body>
+  <h1>While</h1>
+
+<script>
+
+// 2 - Convertir la primera letra de cada palabra a mayusculas y el resto en minusculas
+
+var texto=prompt("Introduzca un texto") + " ";
+var espacio;
+var palabra;
+
+while (espacio!="-1") {
+
+  //teneniendo en cuenta los espacios
+
+  espacio=texto.indexOf(" ");
+  palabra=texto.substring(0,espacio+1);
+
+    if (espacio==0) {
+      document.write("&nbsp;");
+    }
+
+    else {
+      document.write(palabra.charAt(0).toUpperCase() + palabra.substring(1).toLowerCase());
+    }
+
+  texto=texto.substring(espacio+1);
+
+}
+
+
+
+/*while (espacio!="-1") {
+
+//sin tener en cuenta los espacios
+
+  espacio=texto.indexOf(" "); // Lo primero indica que quieres buscar y si separamos por una coma [texto.indexOf(" ",inicio)] lo segundo desde donde quieres buscar y si no encuentra ninguno el resultado es -1
+  palabra=texto.substring(0,espacio+1);
+
+  document.write(palabra.charAt(0).toUpperCase() + palabra.substring(1).toLowerCase());
+
+  texto=texto.substring(espacio+1);
+
+}
+*/
+
+</script>
+
+</body>
+
+</html>

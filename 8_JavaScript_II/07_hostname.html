@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Tus webs favoritas</h1>
+  <div>
+    <input type="text" id="urlCompleta"  placeholder="Introduce aquí una nueva web" size="60"/>
+    <input type="button" value="AÑADIR" onclick="aniadirUrl()"/>
+  </div>
+  <div id="divListado"></div>
+
+  <script>
+
+var listaUrlsSimp = new Array();
+
+function aniadirUrl() {
+  var nuevaUrlCompleta = document.getElementById("urlCompleta").value;
+  var nuevaUrlSimp = nuevaUrlCompleta.hostname;
+
+  listaUrlsSimp [listaUrlsSimp.length] = nuevaUrlSimp;
+
+  listarUrlsSimp();
+}
+
+function listarUrlsSimp() {
+  var divListado = document.getElementById("divListado");
+  divListado.innerHTML = "<h3>Lista de webs</h3>";
+  
+  for (var i = 0; i < listaUrlsSimp.length; i++) {
+    var urlSimp = listaUrlsSimp [i];
+    divListado.innerHTML += "<p>Url: " + urlSimp + "</p>";
+  }
+}
+  </script>
+</body>
+</html>

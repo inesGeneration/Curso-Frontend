@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Funciones con retorno</title>
+</head>
+<body>
+  
+</body>
+
+<script type="text/javascript">
+
+////// Crear una funcion que:
+
+// 1- Muestre 6 cabeceras del h1 al h6 con titulo que se pase por parametro (mediante un bucle)
+
+var nivel;
+
+function dameTitulo(texto, nivel) { // Nivel = h1, h2... 
+  var abreH = "<h" + nivel + ">";
+  var cierraH = "</h" + nivel + ">";
+  return abreH + texto + cierraH;
+}
+
+for (var nivel = 1; nivel <= 6; nivel++) {
+	dameTitulo();
+  document.write(dameTitulo("Titulo nivel " + nivel ,nivel));
+}
+
+// 1- GERMAN
+/*
+function dameTitulo2(texto) {
+  for (var nivel = 1; nivel <= 6; nivel++) {
+    var abreH = "<h" + nivel + ">";
+    var cierraH = "</h" + nivel + ">";
+    document.write(abreH + texto + nivel + cierraH);
+  }
+}
+
+dameTitulo2("Titulo nivel ");
+
+*/
+
+
+// 2- Reciba 3 parametros. Los dos primeros son los operandos, el 3º el operador (suma "+", resta "-", mult "*", div "/") y que muestre el resultado (dentro de la funcion)
+
+function operacion(param1, param2, operador) {
+  if (operador=="+") {
+    var resultado = param1 + param2;
+    document.write(param1 + " " + operador + " " + param2 + " = " + resultado + "<br/>")
+  }
+  if (operador=="-") {
+    var resultado = param1 - param2;
+    document.write(param1 + " " + operador + " " + param2 + " = " + resultado + "<br/>")
+  }
+  if (operador=="*") {
+    var resultado = param1 * param2;
+    document.write(param1 + " " + operador + " " + param2 + " = " + resultado + "<br/>")
+  }
+  if (operador=="/") {
+    var resultado = param1 / param2;
+    document.write(param1 + " " + operador + " " + param2 + " = " + resultado + "<br/>")
+  }
+}
+
+operacion(2, 3, "+")
+operacion(2, 3, "-")
+operacion(2, 3, "*")
+operacion(2, 3, "/")
+
+// 2- GERMAN
+/*
+function operacion(param1, param2, operador) {
+  var resultado;
+  if (operador=="+") {
+    resultado = param1 + param2;
+  }
+  else if (operador=="-") {
+    resultado = param1 - param2;
+  }
+  else if (operador=="*") {
+    resultado = param1 * param2;
+  }
+  else if (operador=="/") {
+    resultado = param1 / param2;
+  }
+  document.write(param1 + " " + operador + " " + param2 + " = " + resultado + "<br/>")
+}
+
+operacion(2, 3, "+")
+*/
+
+// espacios
+
+  document.write("<br/><br/>")
+
+
+// 3- Una funcion que eleve al cubo un numero. Comprobar que funciona con 3 (27) y con 4 (64)
+
+function cubo(param) {
+  var resultadoCubo = param * param * param;
+  document.write(param + " al cubo es " + resultadoCubo + "<br/>")
+}
+
+cubo(3);
+cubo(4);
+
+
+
+////// Crear las mismas funciones pero usando:
+
+// 1- En la 1, con un array que tenga los valores
+        // var cabeceras = ["h1", "h2", "h3", ... "h6"]
+
+var cabeceras = ["h1", "h2", "h3", "h4", "h5", "h6"];
+
+
+function dameTituloArray(textoArray, i) { // Nivel = h1, h2... 
+  var abreHArray = "<" + cabeceras[i] + ">";
+  var cierraHArray = "</" + cabeceras[i] + ">";
+  return abreHArray + textoArray + cierraHArray;
+}
+
+var nivelH;
+
+for (var i = 0; i < 6; i++) {
+	dameTituloArray();
+  nivelH = i + 1;
+  document.write(dameTituloArray("Titulo nivel " + nivelH,i));
+}
+
+
+// 2- En la 2, dos funciones que hagan lo mismo pero:
+        // Una usando la funcion eval(), que ejecuta un texto como si fuera codigo JS
+        // Dos usando solo el operador ternario (sin if())
+
+function operacionEval(paramEval1, paramEval2, operadorEval) {
+  var op = eval(operadorEval);
+  var resultadoEval = paramEval1 + op + paramEval2;
+  document.write(paramEval1 + " " + operadorEval + " " + paramEval2 + " = " + resultadoEval + "<br/>")
+}
+  
+operacionEval(2,2,"+")
+
+
+// 3- Una funcion que eleve a la X potencia (segundo parametro), mediante un bucle y si sabes lo que es una funcion recursiva, mediante una funcion recursiva.
+
+function elevar(numero, exponente) {
+  var resultadoElevar = numero;
+  
+  for (var i = 1; i < exponente; i++) {
+    resultadoElevar = resultadoElevar * numero;
+  }
+
+  document.write(numero + " elevado a " + exponente + " es " + resultadoElevar + "<br/>")
+}
+
+elevar(3, 3);
+elevar(4, 3);
+elevar(5, 2);
+
+
+</script>
+
+</html>

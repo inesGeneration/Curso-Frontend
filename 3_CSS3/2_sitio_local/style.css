@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	background-color: antiquewhite;
+}
+
+h1{ 
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	color: red;
+	font-size: 2.5em;
+	text-shadow: 4px 2px 2px black; /* text-shadow: desplazamiento altura, desplazamiento anchura, blur, color */
+} 
+
+p{ 
+	font-family: Oswald;
+	font-size: 1em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.izquierda{
+	margin-left: 5em;
+	color: red;
+	display: none; /* En este caso se oculta y NO conserva el espacio */
+	width: 40%;
+}
+
+.derecha{
+	margin-right: 5em;
+	visibility: hidden; /* En este caso se oculta y SI conserva el espacio */
+	width: 40%;
+}
+
+.foto{
+	float: left; /* Float hace que se apilen */
+	width: 40%;
+}
+
+.bloqueVerde{
+	min-height: 20em; 
+	background-color: green;
+	margin-left: 5em;
+	margin-right: 5em;
+	box-shadow: 2px 4px 20px rgba(255,0,0,0.5) inset; /* El ultimo parametro de rgba es la transparencia que va de 0 a 1 . Y el inset hace que la sombra sea interior */
+}
+
+.bloqueAzul{
+	background-color: blue;
+	margin: 10px;
+	position: relative;
+	right: -2em;
+	top: -1em;
+	box-shadow: 2px 4px 20px rgba(255,0,0,0.5); /* El ultimo parametro de rgba es la transparencia que va de 0 a 1 . Y el inset hace que la sombra sea interior */
+}

@@ -1,0 +1,28 @@
+Inicio puede enlazarse con “Gestor Portfolios” en lugar de tener un botón propio y separarlo un poco del menu para que se note que es el logo
+
+Nuevo y eliminar no se entiende bien la función
+Quizás se pueden meter los dos en una categoría superior que se llame “Gestión de proyectos”
+
+Ver portfolios
+Quizás en lugar de un menu desplegable en el nav funcionaría mejor con un apartado en la página  para filtrar como se quiere visualizar, para que cuando estés en ese apartado puedas cambiar el modo de visualización sin tener que abrir el menu desplegable cada vez
+
+Y eliminar todos los botones que no tengan función real como sing up, login, los del footer
+
+
+“Por categorias” no funciona
+
+“De 1 en 1” - si vemos el siguiente cv se bloquea y no deja volver al anterior, parece que ya no puede acceder los datos
+
+
+
+- Menú:
+
+- Inicio puede enlazarse con “Gestor Portfolios” en lugar de tener un botón propio y también separarlo un poco del menu para que se diferencia y se note que es el logo. Quizás también destacarlo con otra tipografía para que se entienda como logo de la web.
+
+- Nuevo y eliminar no se entiende bien la función. Quizás se pueden meter los dos en una categoría superior que se llame “Gestión de proyectos” o algo similar.
+
+- Quizás en lugar de un menu desplegable en “Ver portfolios” funcionaría mejor con un menu en la propia página para filtrar como se quiere visualizar.
+	
+	- Footer:
+
+- Eliminar todos los botones que no tengan función real.

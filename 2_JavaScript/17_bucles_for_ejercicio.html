@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Bucles for ejercicio</title>
+		<meta charset="UTF-8"/>
+	</head>
+	<body><h1>Bucles for ejercicio</h1>
+
+<script>
+
+// Hacer una tabla con las tablas de multiplicar
+
+
+////// GERMAN
+
+document.write("<table border=\"1px\" bordercolor=\"#ffb22f\" cellpadding=\"15px\" cellspacing=\"0px\">")
+
+document.write("<tr>")
+for (var num = 1; num <= 10; num++) {
+	document.write("<th>");
+	document.write("Tabla del " + num);
+	document.write("</th>");
+}
+document.write("</tr>")
+
+
+document.write("<tr>")
+for (var num = 1; num <= 10; num++) {
+	document.write("<td>");
+	document.write(num + " * 1 = " + num);
+	document.write("</td>");
+}
+document.write("</tr>")
+
+
+document.write("</table>")
+
+
+// Dar Espacios
+document.write("<br/><br/><br/>")
+
+
+// 1 - Este tiene parte en bucle y parte manual
+/*
+document.write("<table>")
+
+for (var i = 1; i <= 10; i++) {
+	document.write("<tr>" +
+		"<td>1 * " + i + " = " + 1 * i + "</td>" +
+		"<td>2 * " + i + " = " + 2 * i + "</td>" +
+		"<td>3 * " + i + " = " + 3 * i + "</td>" +
+		"<td>4 * " + i + " = " + 4 * i + "</td>" +
+		"</tr>");
+}
+
+document.write("</table>")
+*/
+
+
+
+////// 2 - Este tiene ya todo en bucle
+
+// Crear la tabla
+document.write("<table border=\"1px\" bordercolor=\"#ffb22f\" cellpadding=\"15px\" cellspacing=\"0px\">")
+
+// Crear la primera fila con los titulos
+document.write("<tr>");
+for (var tabla = 1; tabla <= 10; tabla++) {
+	document.write("<th>Tabla del " + tabla + "</th>");
+}
+document.write("</tr>");
+
+// Crear cada fila
+for (var i = 1; i <= 10; i++) {
+	document.write("<tr>");
+	// Crear cada columna de cada fila
+	for (var num = 1; num <= 10; num++) {
+		document.write("<td>" + num + " * " + i + " = " + num * i + "</td>");
+	}
+	document.write("</tr>");
+}
+
+// Cerrar la tabla
+document.write("</table>")
+
+
+// Dar Espacios
+document.write("<br/><br/><br/>")
+
+
+
+////// 3 - Esta es otra manera haciendolo con arrays en horizontal
+
+var tabla=new Array();
+var t=1;
+
+// Crear la tabla
+document.write("<table border=\"1px\" bordercolor=\"#ffb22f\" cellpadding=\"15px\" cellspacing=\"0px\">")
+
+// Crear cada fila
+for (var t = 1; t <= 10; t++) {
+	document.write("<tr>");
+	// Crear el titular de cada fila
+	document.write("<td>Tabla del " + t + "</td>");
+	// Crear cada celda
+	for (var i = 1; i <= 10; i++) {
+		tabla[t]=t*i;
+		document.write("<td>" + t + " * " + i + " = " + tabla[t] + "</td>");
+	}
+	document.write("</tr>");
+}
+
+// Cerrar la tabla
+document.write("</table>")
+
+</script>
+	</body>
+</html>

@@ -1,0 +1,91 @@
+Toma de requisitos
+
+PORTFOLIO
+
+Preguntas del desarrolador:
+
+- ¿Qué quieres transmitir?
+	Profesionalidad y multidisciplinaridad
+
+- ¿Qué tipo de profesional eres?
+	Meticulosa 
+
+- ¿Qué tipo de profesional quieres transmitir que eres?
+	Ingenio y calidad
+
+- ¿Qué emoción quieres que sienta el visititante a tu página?
+	Dinamismo y ligereza
+
+- ¿Qué estética quiere o como se la imagina?
+	Simplicidad y estructuración (intuitivo)
+
+- ¿Quién es tu público objetivo?
+	Profesionales del mundo del diseño (empresas, estudios…)
+
+- ¿Va a necesitar mantemiento, actualizaciones o evolutivos?
+	Actualización de nuevos proyectos
+
+- Qué nivel de estructuración a nivel técnico.
+
+
+- ¿Qué clase de interfaz? (intuitivo, complejo..)
+	Intuitivo e interactivo
+
+- ¿Como quieres categorizar la información?
+	Por disciplinas
+
+- ¿Qué tipo de información quieres mostrar?
+	Proyectos de diferentes disciplinas, CV, servicios…
+
+- ¿Qué es lo primero que quieres mostrar?
+	REEL de proyectos
+
+- ¿Quieres vincularla a RRSS u otras webs?
+	SI
+
+- ¿Cual es el objetivo? (beneficios economicos, darse a conocer, crear comunidad...)
+	Portfolio online que demuestre mis capacidades como programadora y diseñadora
+		Económicos, darse a conocer, crear comunidad (descargas)
+
+- ¿Donde ve las dificultades de cómo comunicar y organizar en caso de tener un portofolio heterógeneo?
+	3 Secciones??? Portfolio standard con filtros??
+
+- ¿Qué tienes para mostrar? ¿o qué trabajos quieres  mostrar? ¿En qué sector quieres trabajar?
+	Diseño gráfico, diseño web y producto
+
+- ¿Qué formatos quieres mostrar esos trabajos?
+	Imágenes, videos, texto + Animaciones?
+
+- ¿Tienes los recursos o hay que crearlos?
+	En proceso
+
+- ¿Alguna presentación animada? Detalles extra
+	Algo de animación en la interactividad
+
+- ¿Quieres que sea resposive?
+	SI (Móvil, tablet, PC…)
+	
+- ¿Idiomas?
+	Español e inglés (Japonés?)
+
+- ¿Cual es tu lugar de actuación?
+	Europa? 
+
+- ¿Qué tecnologías conoces? Frameworks, lenguajes de prog, IDEs, programas...
+
+- ¿Queremos incluir el curriculum?
+	SI pero no visible a todo el mundo
+
+- Clientes anteriores
+	SI
+
+- Trabajos anteriores
+	SI
+
+- ¿Para cuándo la quieres?
+	6 semanas
+
+- ¿Presupuesto que tiene?
+	
+- ¿Tiene preferencia por alguna tecnología?
+	

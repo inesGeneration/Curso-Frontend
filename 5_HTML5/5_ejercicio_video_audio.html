@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <audio src="recursos/gallo.ogg" controls id="audioWeb"></audio>
+  </div>
+  <div>
+    <video src="recursos/overview.ogv" id="videoWeb" autoplay></video>
+  </div><br/>
+  <input type="button" value="REPRODUCIR TODO" onclick="reproducir();">
+  <br/><br/>
+  <input type="button" value="PAUSAR TODO" onclick="pausar();">
+
+  <script>
+    var videoWeb = document.getElementById("videoWeb");
+    var audioWeb = document.getElementById("audioWeb");
+
+    function pausar() {
+      if (videoWeb.paused == false) {
+        videoWeb.pause();
+      }
+      if (audioWeb.paused == false) {
+        audioWeb.pause();
+      }      
+    }
+
+    function reproducir() {
+      if (videoWeb.paused == true) {
+        videoWeb.play();
+      }
+      if (audioWeb.paused == true) {
+        audioWeb.play();
+      }      
+    }
+  </script>
+</body>
+</html>

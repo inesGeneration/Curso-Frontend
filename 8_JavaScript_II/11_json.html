@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    ////// Pasar de OBJETO a JSON
+
+    // Se guarda en RAM en formato binario
+    var hotel = new Object();
+    hotel.nombre = "Hotel NH"; // ASCII 70 105
+    hotel.direccion = "C/Lo que sea, 99";
+    hotel.precio = 70; // 010010101101
+    hotel.abierto = true; // 111111111 000000001
+
+
+    // Vamos a serializar: convertir datos en binario en formato texto:
+
+    var textoJSONhotel = JSON.stringify(hotel); // JSON es un objeto con dos metodos,uno de ellos es stringify, que transforma algo en texto
+
+    document.write(textoJSONhotel);
+    /* Devuelve un texto con pares de "clave":"valor",
+        { "nombre":"Hotel NH",
+          "direccion":"C/Lo que sea, 99",
+          "precio":70,
+          "abierto":true
+        } 
+    */
+    // JSON es texto plano, entendible por nosotros y un editor de texto
+    
+
+
+    ////// Pasar de JSON a OBJECT
+
+    // las comillas `` permiten escribir texto combinado con variables sin tener que concatenar todo como texto en varias lineas
+
+    var textoJSONotroHotel = `
+        { "nombre":"Hotel Trivago",
+          "direccion":"C/Lo que sea, 119",
+          "precio":50,
+          "abierto":true
+        }`;
+
+    var objOtroHotel = JSON.parse(textoJSONotroHotel); // parse convierte un texto en un objeto de javaScript
+
+    alert(objOtroHotel.nombre);
+
+
+
+
+    ////// Escribir objetos como JSON
+
+    var miHotel = {
+      "nombre": "Hotel 7*",
+      "direccion": "Avenida de los iluminados, 1",
+      "precio": 1000,
+      "abierto": true,
+      "churumbeles": null
+    };
+
+    // Reconoce los atributos del objeto creado como JSON porque JSON utiliza la nomenclatura de la notación nativa de JavaScript
+
+    document.write(`<h2>${miHotel.nombre}</h2>`);
+    document.write(`<h2>${miHotel.precio}</h2>`);
+    document.write(`<h2>${miHotel.churumbeles}</h2>`);
+
+  </script>
+  
+</body>
+</html>

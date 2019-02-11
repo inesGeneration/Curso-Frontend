@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Strings, métodos y propiedades</title>
+  <meta charset="utf-8"/>
+</head>
+
+<body>
+  <h1>Strings, métodos y propiedades</h1>
+
+<script>
+
+
+  //juanito rodriguez lopez
+
+
+  // 2 - Convertir la primera letra de cada palabra a mayusculas y el resto en minusculas
+
+  //var texto=prompt("Introduzca un texto"); //4
+  var texto="juanito rodriguez lopez"; //4
+  var posPrimerEspacio=texto.indexOf(" ");
+  var primeraPalabra=texto.substring(0,posPrimerEspacio);
+
+  document.write("<br/>" + primeraPalabra.charAt(0).toUpperCase() + primeraPalabra.substring(0+1).toLowerCase());
+
+
+  //Mostrar en Proper Case (primera mayuscula) solo la segunda palabra
+
+  var texto=texto.substring(posPrimerEspacio+1);
+  var posSegundoEspacio=texto.indexOf(" ");
+  var segundaPalabra=texto.substring(0,posSegundoEspacio);
+
+  document.write("<br/>" + segundaPalabra.charAt(0).toUpperCase() + segundaPalabra.substring(0+1).toLowerCase());
+
+
+  //Mostrar en Proper Case (primera mayuscula) solo la tercera palabra
+
+  var texto=texto.substring(posSegundoEspacio+1);
+  var posTercerEspacio=texto.indexOf(" ");
+  var terceraPalabra=texto.substring(0,texto.length);
+
+  document.write("<br/>" + terceraPalabra.charAt(0).toUpperCase() + terceraPalabra.substring(0+1).toLowerCase());
+
+
+</script>
+
+</body>
+
+</html>

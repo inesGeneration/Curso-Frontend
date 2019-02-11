@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Ejemplos CSS3</title>
+  <meta charset="utf-8"/>
+</head>
+
+<body>
+  <style type="text/css">
+    h2 {
+      /*Poniendo color azul a TODOS los h2*/
+      color:#25783c;
+    }
+
+    div {
+      /*Poniendo color cian a TODOS los divs*/
+      background-color: cyan;
+      width: 20%;
+      display: inline-block;
+    }
+
+    div p {
+      /*Poniendo color naranja a TODOS los "p" descendientes de un div*/
+      background-color: orange;
+    }
+
+    div span {
+      /*Poniendo color rojo a TODOS los "span" descendientes de un div*/
+      background-color: red;
+    }
+
+    #solo_este_elemento {
+      color: white;
+    }
+
+    .ancho-mitad {
+      width: 50%;
+    }
+
+    .fondo-rojo {
+      background-color: red;
+    }
+
+  </style>
+
+  <h1 style="color:#F08080">Ejemplos CSS3</h1>
+  <h2>Cabecera A nivel 2</h2>
+  <h2>Cabecera B nivel 2</h2>
+
+  <div>
+    <p class="ancho-mitad">Un texto en un <span>párrafo</span></p>
+    <p>Otro texto en un párrafo</p>
+  </div>
+
+  <div>
+    <p>Un texto en un párrafo</p>
+    <p class="ancho-mitad">Otro texto en un párrafo</p>
+  </div>
+
+  <p class="ancho-mitad fondo-rojo">Párrafo fuera</p>
+
+</body>
+
+</html>

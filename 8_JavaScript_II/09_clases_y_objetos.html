@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Clases y objetos</h1>
+<script>
+
+// Esto es solo en EcmaScript 6
+
+  class Rectangulo { // las clases deben empezar por mayúsculas por convención para diferenciarlas de los objetos
+    constructor (nuevoAncho, nuevoAlto) { // Define las caracteristicas fijas que todo objeto tiene que tener. Podemos pedirlas como parámetros en los () al crear cada nuevo objeto
+      this.ancho = nuevoAncho;
+      this.alto = nuevoAlto;
+    }
+    area() { // Podemos definir metodos asignados a esta clase. Son funciones pero no hace falta poner function, sólo ponemos el nombre del método y los parámetros entre paréntesis, seguido del cuerpo
+      var areaTotal = this.ancho * this.alto;
+      return areaTotal;
+    }
+    perimetro() {
+      return this.alto*2 + this.ancho*2;
+    }
+  }
+  
+  var unRect = new Rectangulo();
+
+  unRect.ancho = 10;
+  unRect.alto = 6;
+  document.write("<h2>Area un restangulo: " + unRect.area() + "</h2>");
+
+  var otroRect = new Rectangulo(5,3);
+  document.write("<h2>Area otro rectangulo: " + otroRect.area() + "</h2>");
+
+
+
+  class Circulo {
+    constructor (nuevoRadio) { // Define las caracteristicas fijas que todo objeto tiene que tener. Podemos pedirlas como parámetros en los () al crear cada nuevo objeto
+      this.radio = nuevoRadio;
+    }
+    area() { // Podemos definir metodos asignados a esta clase. Son funciones pero no hace falta poner function, sólo ponemos el nombre del método y los parámetros entre paréntesis, seguido del cuerpo
+      return parseInt(Math.PI * Math.pow(this.radio, 2)); // pow es para potencias
+    }
+    perimetro() {
+      return this.radio * 2 * Math.PI;
+    }
+  }
+
+  var unCirc = new Circulo(10);
+  document.write(`Radio: ${unCirc.radio} <br/>
+                  Area: ${unCirc.area()} <br/>
+                  Perimetro: ${unCirc.perimetro()} <br/>`);
+   // Lo del dolar no es jQuery sino una caracteristica de EcmaScript 6 y tenemos que utilizar ` en lugar de ""
+    
+    
+      var nuevoCumpleanos = new Date();
+
+  class Persona {
+    constructor (nuevoNombre, fechaNacimiento) {
+      this.nombre = nuevoNombre;
+      var fechaActual = new Date ();
+      this.edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+    }
+
+
+
+    verifAdulto () {
+      if (this.edad >= 18) {
+        var resultado = this.edad + " - Mayor de edad";
+        return resultado;
+      }
+      else {
+        var resultado = this.edad + " - Menor de edad";
+        return resultado;
+      }
+    }
+  }
+
+  document.write("<br/><h3>Personas</h3>");
+
+  var juan = new Persona ("Juan", new Date (2000, 11, 1));
+  var ana = new Persona ("Ana", new Date (1970, 1, 1));
+
+  document.write(`Nombre: ${juan.nombre} <br/>
+                  Edad: ${juan.verifAdulto()} <br/><br/>
+                  
+                  Nombre: ${ana.nombre} <br/>
+                  Edad: ${ana.verifAdulto()} <br/>`);
+                  
+
+</script>
+</body>
+</html>

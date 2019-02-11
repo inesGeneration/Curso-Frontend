@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  Nombre: <input type="text" id="inputNombre"/>
+  Apellidos: <input type="text" id="inputApellidos"/>
+  Edad: <input type="number" id="inputEdad"/>
+  Email: <input type="email" id="inputEmail"/>
+  <br><br>
+  <input type="button" value="Añadir" onclick="addPersona();"/>
+  <input type="button" value="Modificar" onclick="modificarPersona();"/>
+  <input type="button" value="Eliminar" onclick="eliminarPersona();"/>
+
+  <div id="divMensajes"></div>
+  <div id="divListado"></div>
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <script src="03_intro_jquery.js"></script>
+
+</body>
+</html>

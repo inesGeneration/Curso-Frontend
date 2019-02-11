@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <img src="recursos/avatar.png">
+    <input type="button" id="input_mostrar" value="Mostrar">
+    <input type="button" id="input_ocultar" value="Ocultar">
+  </div>
+
+  <script src="jquery-3.3.1.js"></script>
+  <script>
+    $(document).ready(
+      function () {
+        $("input").eq(1).click( // Cogemos el 2º elemento del tipo input
+          function () {
+            $("img").eq(0).hide(2000); // En lugar de 2000 podemos poner "slow" por ejemplo para modificar la velocidad
+          }
+        );
+
+        $("input").eq(0).click( // Cogemos el 2º elemento del tipo input
+          function () {
+            $("img").eq(0).show(2000); // En lugar de 2000 podemos poner "slow" por ejemplo para modificar la velocidad
+          }
+        );
+      }
+    );
+  </script>
+</body>
+</html>

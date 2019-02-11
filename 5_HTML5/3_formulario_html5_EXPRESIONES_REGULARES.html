@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Formularios HTML5</title>
+</head>
+<body>
+  <header>
+    <h1>Formularios HTML5</h1>
+  </header>
+
+  <section>
+    <form id="miform" method="get"> <!-- el atrubuto "novalidate" hace que los campos que el navegador autoverifica (por ejemplo en type"number" solo podemos escribir numero y la letra e) por ejemplo si queremos programar norsotros nuestra propia programación --> 
+      Nombre: <input type="text" id="nombre" placeholder="Introduzca un nombre correctamente" pattern="^[A-Z]{1}[a-z]+( [A-Z]{1}[a-z]+)?$" required/></br> <!-- El espacio de detras del ( hace referecia al espacio entre dos nombre-->
+      
+      Edad: <input type="text" id="numero" pattern="^1?\d{1,2}$"/></br>
+      
+      E-mail: <input type="email" id="mi_email" required multiple/></br> <!-- HTML5 valida automáticamente este campo, asi que no necesita una expresion regular-->
+      Busqueda: <input type="search" id="busqueda"/></br>
+      Url: <input type="url" id="miurl"/></br> <!-- HTML5 valida automáticamente este campo, asi que no necesita una expresion regular-->
+      
+      Telefono: <input type="tel" id="telefono" pattern="^\d{9}$"/></br>
+      
+      Código postal: <input type="num" id="cpostal" pattern="^[0-5]\d{4}$"/></br>
+
+      DNI: <input type="text" id="dni" pattern="^([0-9]{1}|K|L|M|X|Y|Z)[0-9]{7}-? ?[A-Z]$"/></br>
+      
+      Numero con minimo: <input type="number" id="num_min" min="5" max="50" step="2"/></br>
+      Numero con rango: <input type="range" id="num_range" min="5" max="50" step="10"/></br>
+      
+      Fecha Nacimiento: <input type="date" id="date_control" pattern=""/></br>
+
+      Hora: <input type="time" id="date_control2"/></br>
+      Fecha y Hora: <input type="datetime-local" id="date_control3"/></br>
+      Mes: <input type="month" id="date_control4"/></br>
+      Semana: <input type="week" id="date_control5"/></br>
+
+      <input type="submit" value="Enviar"/></br>
+
+    </form>
+
+    <input type="text" form="miform"> <!-- Si la maquetacion requiere cerrar el formulario para introducir otro tipo de informacion y posteriormente necesitamos introducir otro input que queramos que sea enviado como parte del formulario anterior, lo podemos asociar con form="idDelFormulario"-->
+
+  </section>
+</body>
+</html>

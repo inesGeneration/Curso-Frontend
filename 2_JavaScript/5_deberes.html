@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Bucles</title>
+  <meta charset="utf-8"/>
+</head>
+
+<body>
+  <h1>Bucles</h1>
+
+<script>
+
+/*Que pregunte al usuario el principio y el final de la cuenta:*/
+
+var inicio=prompt("Indique el inicio");
+var inicio=parseFloat(inicio);
+
+var fin=prompt("Indique el final");
+var fin=parseFloat(fin);
+
+var contador=inicio; // Aunque sea igual, si hace algo diferente es mejor cambiarle el nombre para tener claro cual es su funcion
+
+if (inicio<fin) {
+  while (contador<fin)
+  {
+    alert(contador);
+    contador=contador+1;
+  }
+}
+else {
+  while (contador>fin)
+  {
+    alert(contador);
+    contador=contador-1;
+  }
+}
+
+
+//A - Con el bucle fuera del if (o el if dentro del while)
+var inicio=prompt("Indique el inicio");
+var inicio=parseFloat(inicio);
+
+var fin=prompt("Indique el final");
+var fin=parseFloat(fin);
+
+var contador=inicio; // Aunque sea igual, si hace algo diferente es mejor cambiarle el nombre para tener claro cual es su funcion
+
+while (contador!=fin) // Si contador es distinto de fin, tambien se puede poner (contador<fin || contador>fin)
+{
+  alert(contador);
+  if (inicio<fin) {
+    contador=contador+1;
+  }
+  else if (inicio>fin) {
+    contador=contador-1;
+  }
+}
+
+alert(contador); // Si ponemos un alert al final aparecera tambien el ultimo numero de la cuenta cuando contador=fin
+
+
+//B - Sin ningun if (dos bucles)
+
+var inicio=prompt("Indique el inicio");
+var inicio=parseFloat(inicio);
+
+var fin=prompt("Indique el final");
+var fin=parseFloat(fin);
+
+var contador=inicio; // Aunque sea igual, si hace algo diferente es mejor cambiarle el nombre para tener claro cual es su funcion
+
+while (contador<fin)
+{
+  alert(contador);
+  contador=contador+1;
+}
+
+while (contador>fin)
+{
+  alert(contador);
+  contador=contador-1;
+}
+
+alert(contador); // Si ponemos un alert al final aparecera tambien el ultimo numero de la cuenta cuando contador=fin
+
+// B_2
+
+var inicio=prompt("Indique el inicio");
+var inicio=parseFloat(inicio);
+
+var fin=prompt("Indique el final");
+var fin=parseFloat(fin);
+
+var contador=inicio; // Aunque sea igual, si hace algo diferente es mejor cambiarle el nombre para tener claro cual es su funcion
+
+while (inicio<fin && contador<=fin)
+{
+  alert(contador);
+  contador=contador+1;
+}
+
+while (inicio>fin && contador>=fin)
+{
+  alert(contador);
+  contador=contador-1;
+}
+
+
+//C - Con un unico while, sin if
+
+var inicio=prompt("Indique el inicio");
+var inicio=parseFloat(inicio);
+
+var fin=prompt("Indique el final");
+var fin=parseFloat(fin);
+
+var contador_1=inicio;
+var contador_2=inicio;
+
+while (contador_1<fin || contador_2>fin)
+{
+  alert(contador_1 + " --- " + contador_2);
+  contador_1=contador_1+1;
+  contador_2=contador_2-1;
+}
+
+alert(contador_1 + " - " + contador_2);
+
+
+//C_2
+
+var inicio=prompt("Indique el inicio");
+var inicio=parseFloat(inicio);
+
+var fin=prompt("Indique el final");
+var fin=parseFloat(fin);
+
+var contador=inicio; // Aunque sea igual, si hace algo diferente es mejor cambiarle el nombre para tener claro cual es su funcion
+
+var signo=Math.sign(fin-inicio) // Math.sign() te devuelve si es positivo, negativo o 0
+
+while (contador!=fin)
+{
+  alert(contador);
+  contador=contador+signo;
+}
+
+alert(contador);
+
+</script>
+
+</body>
+
+</html>

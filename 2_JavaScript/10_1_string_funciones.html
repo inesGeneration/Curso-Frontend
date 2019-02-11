@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Strings, métodos y propiedades</title>
+  <meta charset="utf-8"/>
+</head>
+
+<body>
+  <h1>Strings, métodos y propiedades</h1>
+
+<script>
+
+var texto=prompt("Introduzca un texto");
+
+document.write("Su texto:<br/>");
+document.write(texto + "<br/><br/>");
+
+document.write("Longitud: " .concat(texto.length) .concat(" caracteres<br/>")); // texto.length te devuelve el numero de caracteres // .concat() funciona igual que un + pero como solo devuelve un texto solo funciona con string y no se puede poner junto con + (???)
+
+document.write("En mayúsculas: " + texto.toUpperCase() + "<br/>"); // texto.toUpperCase() transforma //TODO el texto en mayusculas
+document.write("En minúsculas: " + texto.toLowerCase() + "<br/>"); // texto.toUpperCase() igual pero transforma el texto en minusculas
+
+document.write("Primer caracter: " + texto.charAt(0) + "<br/>"); // texto.charAt(0) muestra el caracter que queremos (el 0 indica el PRIMER caracter y asi sigue)
+document.write("Tercer caracter: " + texto.charAt(2) + "<br/>");
+document.write("Sexto caracter: " + texto.charAt(5) + "<br/>");
+
+document.write("Primer espacio está en: " + texto.indexOf(" ") + "<br/>"); // texto.indexOf() muestra el primer lugar donde se encuentre ese caracter
+document.write("Primera mitad del texto: " + texto.substring(0, texto.length/2) + "<br/>"); // texto.substring(0, texto.length/2) si ponemos un inicio y un final te muestra un intervalo
+document.write("Segunda mitad del texto: " + texto.substring(texto.length/2) + "<br/>"); //ntexto.substring(texto.length/2) si solo ponemos un dato, lo considera el inicio y sigue hasta terminar
+
+
+// Ejercicios:
+// 1 - Hacer la primera letra mayusculas y el resto minusculas
+
+var texto=prompt("Introduzca un texto");
+
+document.write("Primera en mayúsculas: " + texto.charAt(0).toUpperCase() + texto.substring(1).toLowerCase() + "<br/>");
+
+
+// 2 - Convertir la primera letra de cada palabra a mayusculas y el resto en minusculas
+
+
+
+// 3 - Mostrar solo las iniciales en mayusculas
+
+var texto=prompt("Introduzca un texto");
+var segundaMayuscula=texto.indexOf(" ")+1;
+
+document.write("Primera en mayúsculas: " + texto.charAt(0).toUpperCase() + texto.charAt(segundaMayuscula).toUpperCase() + "<br/>");
+
+
+</script>
+
+</body>
+
+</html>

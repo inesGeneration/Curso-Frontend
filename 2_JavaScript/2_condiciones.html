@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Condiciones</title>
+  <meta charset="utf-8"/>
+</head>
+
+<body>
+  <h1>Condiciones</h1>
+
+<script>
+  /* Espresion: es un conjunto de operaciones que dan un unico resultado
+  */
+
+  var date=prompt("Dime la fecha");
+  var age=prompt("Dime tu edad");
+  /* Otra manera:
+  var age;
+  age=prompt("Dime tu edad")
+  */
+
+  /* if (condicion o valor)
+  {cuerpo de si es cierto}
+  else {cuerpo de si es falso}
+  else if (condiciones alternativas)
+  {cuerpo}
+  else {cuerpo de si es falso} */
+
+  // Ejemplo condicion básica
+  if (date>2015) {
+    alert("Update!");
+  }
+
+
+  // Ejemplo condicion con bifurcacion
+  if (age<18) {
+    alert("Under age.");
+  }
+  else {
+    alert("Adult.");
+  }
+
+
+  // Ejemplo 2 condicion con bifurcacion (se pueden ANIDAR)
+  // Se pone = cuando se define una condicion y == cuando se pregunta una condicion
+  var ifIsAdult=age>=18;
+  // Tambien se puede poner if_is_adult
+
+  if (ifIsAdult==true) {
+    alert("Adult.");
+  }
+  else //cuando es menor de edad
+  {
+    if (age<3) {
+      alert("It is a baby!");
+    }
+    else if (age>=3&&age<13) // && suma la condicion creando un intervalo
+    {
+      alert("It's a child!");
+    }
+    else if (age>=13&&age<18) {
+      alert("It's a teenager!");
+    }
+  }
+
+
+  // Ejemplos booleanos
+  if (true) {
+    alert("It is true!");
+  }
+  if (false) {
+    alert("It is false!");
+  }
+</script>
+
+</body>
+
+</html>

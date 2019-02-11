@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Formularios</title>
+  <meta charset="utf-8"/>
+</head>
+
+<body text="#1070B0">
+  <h1>Formulario de registro</h1>
+
+  <!-- Formulario de registro -->
+  <!-- En action se indica dónde queremos que se envíe el formulario -->
+  <form action="mailto:info@web.com" method="get">
+    <input type="submit" value="ENVIAR POR EMAIL"/>
+    <table cellpadding="5px" cellspacing="0px">
+      <tr>
+        <td>Nombre</td>
+        <td><input id="nombre" size="30" maxlength="50"/></td>
+      </tr>
+      <tr>
+        <td>Primer Apellido</td>
+        <td><input id="primer_apellido" size="30" maxlength="50"/></td>
+      </tr>
+      <tr>
+        <td>Segundo Apellido</td>
+        <td><input id="segundo_apellido" size="30" maxlength="50"/></td>
+      </tr>
+      <tr>
+        <td>E-mail</td>
+        <td><input id="email" size="30" maxlength="100"/></td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td><input id="password" type="password" size="30" maxlength="20"/></td>
+      </tr>
+      <tr>
+        <td>Repetir Password</td>
+        <td><input id="password_rep" type="password" size="30" maxlength="20"/></td>
+      </tr>
+      <tr>
+        <td>Sugerencias</td>
+        <td><textarea id="sugerencias" rows="10" cols="28">Me gustaría que...</textarea></td>
+      </tr>
+    </table>
+</form>
+
+
+</body>
+
+</html>

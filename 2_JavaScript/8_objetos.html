@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Objeto documento</title>
+  <meta charset="utf-8"/>
+</head>
+
+<body>
+  <h1>Objeto documento</h1>
+
+<script>
+
+//document: objeto que corresponde al documento HTML
+//write: es una funcion propia del objeto document, es decir, un metodo
+document.write("Un texto cualquiera");
+document.write("<h2>Una Cabecera 2º nivel</h2>");
+
+
+//Pedir unos datos al usuario y validar que se han introducido datos
+
+//German
+
+var nombre="";
+var textoEdad="";
+var edad=parseInt(textoEdad);
+
+while (isNaN(edad) || edad<=0) { //isNaN pregunta si es un numero o entero o decimal, por lo que si es un NaN no lo considera numero. Ademas el isNaN por defecto tiene un parse int integrago asi que un numero string lo considera un numero
+  textoEdad=prompt("Introduzca edad: ");
+  edad=parseInt(textoEdad);
+}
+
+while (nombre=="" || isNaN(parseInt(nombre))==false) { // Ademas el isNaN por defecto tiene un parse int integrago asi que un numero string lo considera un numero
+  nombre=prompt("Introduzca nombre: ");
+}
+
+
+//1
+
+var nombre;
+var edad;
+
+while (nombre=="" || typeof(nombre)!="string" || !isNaN(nombre))
+{
+  nombre=prompt("Introduzca nombre: ");
+  if (nombre=="" || typeof(nombre)!="string" || !isNaN(nombre)) {
+    alert("Error: El Nombre " + nombre + " no es válido");
+  }
+}
+
+while (edad=="" || isNaN(edad) || edad<=0)
+{
+  edad=prompt("Introduzca edad: ");
+  if (edad=="" || isNaN(edad) || edad<=0) {
+    alert("Error: La Edad " + edad + " no es válido");
+  }
+}
+
+document.write("Anda! Te llamas " + nombre + " y tienes " + edad + " años!");
+
+
+
+//1-v2
+
+var nombre=prompt("Introduzca nombre: ");
+var edad=prompt("Introduzca edad: ");
+
+while (nombre=="" || !isNaN(nombre))
+{
+  nombre=prompt("Introduzca nombre: ");
+}
+
+while (edad=="" || isNaN(edad) || edad<=0)
+{
+  edad=prompt("Introduzca edad: ");
+}
+
+document.write("Anda! Te llamas " + nombre + " y tienes " + edad + " años!");
+
+
+
+//2
+
+var nombre=prompt("Introduzca nombre: ");
+var edad=prompt("Introduzca edad: ");
+
+if (nombre=="") {
+  alert("¿No tienes nombre o qué?");
+}
+
+var edadNumero=parseInt(edad);
+
+if (isNaN(edadNumero)) {
+  alert("¿No tienes edad o qué?");
+}
+
+if (Number.isInteger(edad)) {
+  if (edadNumero > 0) {
+    alert("Muy bien, al menos no eres recien nacido");
+  }
+}
+
+document.write("Anda! Te llamas " + nombre + " y tienes " + edad + " años!");
+
+
+</script>
+
+</body>
+
+</html>

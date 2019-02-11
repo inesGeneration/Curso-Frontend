@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Validacion de datos</title>
+  <meta charset="utf-8"/>
+</head>
+
+<body>
+  <h1>Validacion de datos</h1>
+
+<script>
+// Ejercicio:
+// 3 - Mostrar solo las iniciales en mayusculas
+
+///////////
+//IDEA DEL BUCLE
+var texto="juanito rodriguez lopez perez de todos los santos";
+
+var posEspacio=0;
+var letra=texto.charAt(0).toUpperCase();
+var iniciales="";
+while (posEspacio>=0)   // Mientras consigamos un espacio
+{
+  iniciales=iniciales+letra;
+  posEspacio=texto.indexOf(" ",posEspacio+1); // Lo primero indica que quieres buscar y si separamos por una coma [texto.indexOf(" ",inicio)] lo segundo desde donde quieres buscar y si no encuentra ninguno el resultado es -1
+  letra=texto.charAt(posEspacio+1).toUpperCase();
+}
+
+document.write(iniciales + "<br/>");
+
+
+/////////////
+/* el ejercicio sin bucle letra por letra
+
+var texto="juanito rodriguez lopez";
+var posEspacio1=texto.indexOf(" ");
+var letra_1=texto.charAt(0).toUpperCase();
+
+document.write(texto + "<br/>");
+document.write(letra_1);
+
+var letra_2=texto.charAt(posEspacio1+1).toUpperCase();
+document.write(letra_2);
+
+var posEspacio2=texto.indexOf(" ",posEspacio1+1);
+var letra_3=texto.charAt(posEspacio2+1).toUpperCase();
+document.write(letra_3);
+
+var posEspacio3=texto.indexOf(" ",posEspacio2+1);
+var letra_4=texto.charAt(posEspacio3+1).toUpperCase();
+document.write(letra_4);
+
+*/
+
+</script>
+
+</body>
+
+</html>

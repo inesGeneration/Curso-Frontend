@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- Author: Germán Caballero -->
+<html lang="es">
+	<head>
+		<title>Ejemplos arrays</title>
+		<meta charset="UTF-8"/>
+	</head>
+	<body><h1>Ejemplos arrays</h1>
+<script>
+
+// EJEMPLO 1
+
+var notas=new Array();
+notas[0]=3;
+notas[1]=7;
+notas[2]=8.5;
+notas[3]=10;
+notas[4]=5.5;
+
+// Esta seria la manera de hacerlo uno por uno:
+/*
+document.write("<br/> Elemento 0: " + notas[0]);
+document.write("<br/> Elemento 1: " + notas[1]);
+document.write("<br/> Elemento 2: " + notas[2]);
+*/
+
+var i=0;
+
+// Esta seria la manera de hacerlo en bucle sabiendo el numero de elementos:
+/*
+while (i<5) {
+	document.write("<br/> Elemento " + i + ": " + notas[i]);
+	i=i+1;
+}
+*/
+
+// Esta seria la manera de hacerlo en BUCLE sin saber el numero de elementos:
+while (notas[i]!=undefined) {
+	document.write("<br/> Elemento " + i + ": " + notas[i]);
+	i=i+1;
+}
+
+
+// Espacios
+document.write("<br/><br/>");
+
+
+// EJEMPLO 2 (otra manera de declarar arrays)
+
+var ciudades=["Madrid","Barcelona","Cordoba"];
+var i=0;
+
+while (i<3) {
+	document.write("<br/> Elemento " + i + ": " + ciudades[i]);
+	i=i+1;
+}
+
+
+// EJEMPLO 3 (otras maneras más de declarar arrays)
+
+var marcas=new Array("Kia","Seat","Mercedes");
+
+var arrayVacio=[];
+
+
+// Espacios
+document.write("<br/><br/>");
+
+
+
+// EJEMPLO 4 (otras maneras más de declarar arrays)
+
+var moviles=new Array();
+moviles[0]=new Object();
+moviles[0].marca="Sony Ericsson";
+moviles[0].ram=2;
+
+moviles[1]=new Object();
+moviles[1].marca="Samsung";
+moviles[1].ram=3;
+
+moviles[2]=new Object();
+moviles[2].marca="Sony Ericsson";
+moviles[2].ram=4;
+
+moviles[1].ram=6;
+
+document.write("<br/> Nueva RAM: " + moviles[1].ram + "Gb");
+document.write("<br/> RAM ultimo elemento: " + moviles[moviles.length - 1].ram + "Gb");
+
+
+// Espacios
+document.write("<br/><br/>");
+
+
+
+// Esta seria otra manera de hacerlo en BUCLE sin saber el numero de elementos:
+
+var i=0;
+
+while (i < moviles.length) {
+	document.write("<br/> Marca: " + moviles[i].marca + "; RAM: " + moviles[i].ram);
+	i=i+1;
+}
+
+</script>
+	</body>
+</html>

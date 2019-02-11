@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <input type="text" id="frutas" list="lista_frutas">
+    <datalist id="lista_frutas">
+      <option value="Manzanas"></option>
+      <option value="Peras"></option>
+      <option value="Chirimoyas"></option>
+    </datalist>
+  </form>
+
+  <script src="jquery-3.3.1.js"></script> <!-- se descarga en https://jquery.com/download/ -->
+  <script>
+    $(document).ready(
+      function() {
+      $("#lista_frutas").append("<option value='Uvas'></option>");
+      var otrasFrutas = ["Platanos", "Ciruelas", "Aguacates"];
+      for (var i = 0; i < otrasFrutas.length; i++) {
+        $("#lista_frutas").append("<option value='" + otrasFrutas[i] + "'></option>"); // como en html los valores de los atributos hay que ponerlos entre "" o '' y javascript utiliza las "" para abrir y cerrar strings, utilizamos '' o tabién podriamos escaparlo con \" \"
+        }
+      }
+    );
+  </script>
+</body>
+</html>

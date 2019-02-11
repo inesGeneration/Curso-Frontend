@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Formulario</h1>
+  <form>
+    <input type="button" value="validar" onclick="validar();">
+    <table id="form">
+      <tr>
+        <td>Cargar número:</td>
+        <td><input id="numero" maxlength="3" type="number" placeholder="Indique un numero de 3 cifras"/></td>
+      </tr>
+      <tr>
+          <td>Número de cifras:</td>
+          <td><div id="divMensaje"></div>
+          </td>
+        </tr>
+    </table>
+  </form>
+
+
+  <script>
+    
+    var divMensaje = document.getElementById("divMensaje");
+    var nodeResult = document.createTextNode("");
+
+    divMensaje.appendChild(nodeResult); // hay que sacar el appendchild de la funcion porque si no, cada vez que demos al boton de validar crea uno nuevo y se acumulan los nodeResult
+
+    function validar() {
+      var inputNumero = document.getElementById("numero");
+      var numero = parseFloat(inputNumero.value); 
+
+      if (numero < 0 || numero >= 1000 || isNaN(numero)) {
+        inputNumero.style.borderColor = "#F04040";
+        nodeResult.nodeValue = "Error: introduzca un numero positivo menor que 1000";
+      }
+
+      else {
+        if (numero < 10) {
+          inputNumero.style.borderColor = "#92ef40";
+          nodeResult.nodeValue = "1 cifra";
+        }
+        
+        else {
+          if (numero < 100) {
+            inputNumero.style.borderColor = "#92ef40";
+            nodeResult.nodeValue = "2 cifras";
+          }
+      
+          else {
+            inputNumero.style.borderColor = "#92ef40";
+            nodeResult.nodeValue = "3 cifras";
+          }
+        } 
+      }
+      
+    }
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.trayectoria {
+	position: fixed;
+	width: 10px;
+	height: 10px;
+	background-color: red;
+	left: 0px;
+	top: 25%;
+	transform: rotate(10deg);
+}
+
+.proyectil {
+	position: absolute;
+	
+	width: 150px;
+	height: 150px;
+	background-color: rgba(132,221,14,0.4);
+	
+	animation: vueltas;
+	animation-duration: 3s;
+	
+	animation-iteration-count: infinite;
+	
+	animation-timing-function: linear;
+	background-image: url(images/cohete-espacial.png);
+	background-size: cover;
+	
+}
+
+@keyframes vueltas {
+	0% {
+		transform: translateX(-200px) rotate(0deg);
+	}
+	
+	100% {
+		transform: translateX(2000px) rotate(400deg);
+	}
+	
+}

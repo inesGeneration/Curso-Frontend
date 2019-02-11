@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Ejercicio 8, 3:</h1>
+  <h2>Deducir el numero de cifras</h2>
+  <p>Numero:</p>
+  <input id="inputNum" type="number" placeholder="Indique un numero de 3 cifras"/><br>
+  <input type="button" onclick="funNumCifras();"/>
+  <div id="divMensaje">
+    Resultado:
+  </div>
+
+  <script>
+    function funNumCifras() {
+      var inputNum = document.getElementById("inputNum");
+      var valorNum = parseInt(inputNum.value);
+      var divMensaje = document.getElementById("divMensaje");
+      
+      /*
+      // Mediante nodos:
+      var nodeResult = document.createTextNode ("Numero" + valorNum);
+      divMensaje.appendChild(nodeResult);
+
+      // Mediente nodo y texto:
+      divMensaje.childNodes[0] = "Numero" + valorNum;
+      */
+
+
+      /*
+      // Mediante sustitucion HTML interno:
+      if (valorNum < 0 || valorNum > 999) {
+        divMensaje.innerHTML = "Error: introduzca un numero positivo menor que 1000";
+      }
+
+      else {
+        if (valorNum < 10) {
+          divMensaje.innerHTML = "1 cifra";
+        }
+
+        else if (valorNum < 100) {
+          divMensaje.innerHTML = "2 cifras";
+        }
+
+        else {
+          divMensaje.innerHTML = "3 cifras";
+        }
+      }
+      */
+
+
+      // Mediente texto:
+      
+      var valorNumEnTexto = "" + valorNum;
+      
+      if (valorNum < 0 || valorNum > 999 || isNaN(valorNum)) {
+        divMensaje.innerHTML = "Error: introduzca un numero positivo menor que 1000";
+      }
+
+      else {
+        divMensaje.innerHTML = "Resultado: " + valorNumEnTexto.length + " cifras";
+      }      
+
+    }
+  </script>
+  
+</body>
+</html>

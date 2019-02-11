@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Ordenar</title>
+		<meta charset="UTF-8"/>
+	</head>
+	<body><h1>Ordenar</h1>
+
+<script>
+
+// MIO
+
+//Declaración del array de 5 posiciones
+var lista = new Array();
+
+lista[0]=25;
+lista[1]=3;
+lista[2]=1;
+lista[3]=2;
+lista[4]=4;
+
+
+for (var i = 0; i < lista.length; i++) {
+	document.write(lista[i] + ", ");
+}
+
+document.write("<h1>Lista ordenada</h1>");
+
+
+//////
+
+
+var listaOrd = new Array;
+var menor;
+var sigMenor;
+
+for (var o = 0; o < lista.length; o++) {
+	menor = listaOrd[o-1];
+	sigMenor = lista[0];
+	for (var i = 0; i < lista.length; i++) {
+		if (lista[i] > menor || menor=="undefined") {
+			if (sigMenor > lista[i]) {
+					sigMenor = lista[i];
+			}
+		}
+	listaOrd[o]=sigMenor;
+	}
+	document.write(listaOrd[o] + ", ");
+}
+
+
+/*
+
+var menor = lista[0];
+
+for (var i = 0; i < lista.length; i++) {
+	if (lista[i] > 0) {
+		if (menor > lista[i]) {
+			menor = lista[i];
+		}
+	}
+}
+
+document.write("Numero menor: " + menor + "<br/>");
+
+
+var segMenor = lista[0];
+
+for (var i = 0; i < lista.length; i++) {
+	if (lista[i] > menor) {
+		if (segMenor > lista[i]) {
+				segMenor = lista[i];
+		}
+	}
+}
+
+document.write("Segundo numero menor: " + segMenor + "<br/>");
+
+
+var terMenor = lista[0];
+
+for (var i = 0; i < lista.length; i++) {
+	if (lista[i] > segMenor) {
+		if (terMenor > lista[i]) {
+				terMenor = lista[i];
+		}
+	}
+}
+
+document.write("Tercer numero menor: " + terMenor + "<br/>");
+*/
+
+
+
+
+// GERMAN
+/*
+// 1 - manualmente uno por uno
+
+var arrayDesord = [7,3,9,2,5,6,1];
+var numMenor = 0;
+
+if (arrayDesord[0] < arrayDesord[1]) {
+	console.log("el 0 es menor");
+	numMenor = arrayDesord[0];
+}
+
+else {
+	console.log("el 0 es mayor");
+	numMenor = arrayDesord[1];
+}
+
+if (numMenor < arrayDesord[2]) {
+	numMenor = numMenor; // No haria falta ponerlo, es redundante
+}
+
+else {
+	numMenor = arrayDesord[2];
+	console.log("el 2 es mayor");
+}
+
+if (numMenor < arrayDesord[3]) {
+	numMenor = numMenor; // No haria falta ponerlo, es redundante
+}
+
+else {
+	numMenor = arrayDesord[3];
+	console.log("el 1 es mayor");
+}
+*/
+
+
+// 2 - en BUCLE
+/*
+
+var arrayDesord = [7,3,9,2];
+var arrayOrd = new Array ();
+var numMenor = arrayDesord[0];
+var posMenor;
+
+for (var i = 0; i < 4; i++) {
+	if (numMenor > arrayDesord[i]) {
+			numMenor = arrayDesord[i];
+			posMenor = i;
+	}
+}
+
+arrayOrd[] = numMenor;
+
+var segMenor = arrayDesord[0];
+
+for (var i = 0; i < 4; i++) {
+	if (posMenor != i) {
+		if (segMenor > arrayDesord[i]) {
+				segMenor = arrayDesord[i];
+		}
+	}
+}
+
+document.write("Numero menor: " + numMenor + "<br/>");
+document.write("Segundo menor: " + segMenor + "<br/>");
+
+document.write("Array: " + "<br/>");
+
+
+
+
+*/
+
+
+</script>
+	</body>
+</html>

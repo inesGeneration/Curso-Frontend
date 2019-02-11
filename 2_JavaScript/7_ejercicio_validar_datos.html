@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Validacion de datos</title>
+  <meta charset="utf-8"/>
+</head>
+
+<body>
+  <h1>Validacion de datos</h1>
+
+<script>
+
+// Pedir el inicio y fin de un contador como un numero al usuario y repetir la peticion hasta que introduzca un numero (valor valido)
+
+//1
+
+var inicio;
+var fin;
+
+while(isNaN(inicio)) //isNaN pregunta si es un numero o entero o decimal, por lo que si es un NaN no lo considera numero
+{
+  inicio=prompt("Dime un numero de inicio");
+}
+
+while(isNaN(fin))
+{
+  fin=prompt("Dime un numero de fin");
+}
+
+
+//2
+
+var inicio;
+var fin;
+var inicioNoEsUnNumero=isNaN(inicio);
+var finNoEsUnNumero=isNaN(inicio);
+
+alert(typeof(inicioNoEsUnNumero));
+
+while(inicioNoEsUnNumero)
+{
+  inicio=prompt("Dime un numero de inicio");
+  inicioNoEsUnNumero=isNaN(inicio);
+}
+
+while(finNoEsUnNumero)
+{
+  fin=prompt("Dime un numero de fin");
+  finNoEsUnNumero=isNaN(fin);
+}
+
+
+//3
+
+var inicio;
+var fin;
+
+while(isNaN(inicio))
+{
+  inicio=prompt("Dime un numero de inicio");
+  inicio=parseInt(inicio); //parse int convierte un texto en numeros enteros, devuelve SIEMPRE algo tipo Number
+}
+
+  // parseInt("27")=27;
+  // parseInt(27)=27;
+  // parseInt("texto sin numero")=NaN; // NaN es un TIPO de numero que no es un numero
+
+
+while(typeof(fin)!="number")
+{
+  fin=prompt("Dime un numero de fin");
+  fin=parseInt(fin); // Con typeof no se puede porque al poner el parseInt intenta convertir las letras a numeros y las convierte en nAn (no es un numero) que es una categoria de tipo numero
+  alert(typeof(fin));
+}
+
+
+//4
+
+var inicio;
+
+while(typeof(inicio)!=typeof(10))
+{
+  inicio=prompt("Dime un numero de inicio");
+  alert("TIPO: " + typeof(f));
+  inicio=parseInt(inicio); // Con typeof no se puede porque al poner el parseInt intenta convertir las letras a numeros y las convierte en nAn (no es un numero) que es una categoria de tipo numero
+  alert("TIPO: " + typeof(inicio));
+}
+
+</script>
+
+</body>
+
+</html>

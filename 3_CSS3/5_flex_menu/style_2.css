@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+.contenedorFlex {
+	width: 75%;
+	min-height: 10em;
+	background-color: aquamarine;
+	margin: auto;
+	padding: 5px;
+	display: flex; /*flex permite que los items contenidos en este contenedor sean flexibles en altura, anchura y disposición, por lo que sustituye a "float:left" de manera mucho mas flexible*/
+	flex-direction: row; /*por defecto pone row, que es el fila*/
+	flex-wrap: wrap; /*con wrap intenta mantener el ancho definifido de los items interiores asi como los margenes y cuando el tamaño de estos sobrepasa el ancho del contenedor, los apila en una siguiente linea*/
+}
+
+.cajaFlex {
+	width: 8em;
+	min-height: 8em;
+	background-color: darkslategray;
+	margin: 5px;
+	border-radius: 10px;
+	line-height: 8em; /*esto es el interlineado del texto*/
+	font-size: 2em;
+	text-align: center;
+	flex-direction: column;
+	align-content: stretch;
+}
+
+.espacio-100 {
+	width: 90%;
+	flex-grow: 1;
+}
+
+.espacio-33 {
+	width: 30%;
+	flex-grow: 1;
+}
+
+.espacio-75 {
+	width: 10%;
+	flex-grow: 3;
+}
+
+.espacio-25 {
+	width: 10%;
+	flex-grow: 1;
+}
+
+body {
+	background-color: red;
+	margin: 1;
+}
+
+@media only screen and (max-width: 600px) {
+
+.cajaFlex {
+	width: 8em;
+	min-height: 8em;
+	background-color: #FF408E;
+	margin: 5px;
+	border-radius: 10px;
+	line-height: 8em; /*esto es el interlineado del texto*/
+	font-size: 2em;
+	text-align: center;
+	flex-direction: column;
+	align-content: stretch;
+}
+
+}

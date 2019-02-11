@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Formularios HTML5</title>
+</head>
+<body>
+  <header>
+    <h1>Formularios HTML5</h1>
+  </header>
+
+  <section>
+    <form id="miform" method="get" novalidate="true"> <!-- el atrubuto "novalidate" hace que los campos que el navegador autoverifica (por ejemplo en type"number" solo podemos escribir numero y la letra e) por ejemplo si queremos programar norsotros nuestra propia programación --> 
+      Nombre: <input type="text" id="nombre"/></br>
+      Numero: <input type="number" id="numero"/></br>
+      E-mail: <input type="email" id="mi_email"></br>
+      Busqueda: <input type="search" id="busqueda"/></br>
+      Url: <input type="url" id="miurl"/></br>
+      Telefono: <input type="tel" id="telefono"/></br>
+      Numero con minimo: <input type="number" id="num_min" min="5" max="50" step="2"/></br>
+      Numero con rango: <input type="range" id="num_range" min="5" max="50" step="10"></br>
+      Fecha: <input type="date" id="date_control"></br>
+      Hora: <input type="time" id="date_control2"></br>
+      Fecha y Hora: <input type="datetime-local" id="date_control3"></br>
+      Mes: <input type="month" id="date_control4"></br>
+      Semana: <input type="week" id="date_control5"></br>
+
+      <input type="submit" value="Enviar"/></br>
+
+    </form>
+  </section>
+</body>
+</html>

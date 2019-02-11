@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.espacioCentral {
+	background-color: rgba(157,178,227,1.00);
+	width: 30em;
+	margin: auto;
+	min-height: 5em;
+	padding: 10px;
+}
+
+.espacioBanner {
+	width: 30em;
+	margin: auto;
+	background-color: aqua;
+	height: 4em;
+}
+
+.botonMenu {
+	background-color: aquamarine;
+	float: left;
+}
+
+.menuBanner {
+	float: left;
+	background-color: 
+}
+
+section {
+	background-color: rgba(33,93,239,1.00);
+	min-height: 5em;
+	margin-top: 10px;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.caja-100, .caja-33, .caja-25, .caja-75 {
+	background-color: rgba(214,230,255,1.00);
+	min-height: 5em;
+	padding: 10px;
+}
+
+.caja-33 {
+	width: 28.95%;
+	float: left;
+}
+
+.caja-25 {
+	width: 20%;
+	float: left;
+}
+
+.caja-75 {
+	width: 70%;
+	float: left;
+}
+
+h1 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	margin-top: 0;
+	padding: 5px;
+}
+
+p {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	padding: 5px;
+}
+
+header {
+	background-color: whitesmoke;
+	height: 4em;
+}
+
+ul li {
+	list-style: none;
+}

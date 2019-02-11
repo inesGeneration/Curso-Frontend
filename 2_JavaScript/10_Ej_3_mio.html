@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Validacion de datos</title>
+  <meta charset="utf-8"/>
+</head>
+
+<body>
+  <h1>Validacion de datos</h1>
+
+<script>
+// Ejercicio:
+// 1 - Hacer la primera letra mayusculas y el resto minusculas
+
+var texto=prompt("Introduzca un texto");
+var espacio=texto.indexOf(" ");
+var palabra=texto.substring(0,espacio)
+var siguientePalabra=texto.substring(espacio,texto.length)
+
+document.write(palabra + siguientePalabra);
+
+
+</script>
+
+</body>
+
+</html>

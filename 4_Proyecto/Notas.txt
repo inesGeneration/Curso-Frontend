@@ -1,0 +1,14 @@
+Recomendación de Germán, hacer un proyecto personal que incluya estas 4 operaciones integradas en la interfaz:
+
+CRUD
+
+Create
+Read
+Update
+Delete
+
+
+
+Mirar: MongoDB y Mongoose
+
+

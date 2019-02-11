@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Funciones</title>
+</head>
+<body>
+  
+</body>
+
+<script type="text/javascript">
+
+////// Funcion basica: ni recibe ni devuelve datos pero 
+
+function mostrarTitulo() { // Aquí definiriamos que hace la funcion
+  document.write("<h2>Sub-Titulo de la pagina </h2>");
+  document.write("<br/>")
+}
+ 
+mostrarTitulo(); // Aqui llamamos a la funcion (la invocamos), debe tener siemore los ()
+
+
+
+////// Funcion que si recibe datos
+
+function calculaDescuento(precio, descuento) { // las variables que crea la funcion de precio y descuento se crean, ejecutan y destruyen dentro de la funcion, por lo que no podemos llamarlas desde fuera de la funcion
+  var precioConDesc;
+  precioConDesc = precio - precio * descuento / 100;
+  document.write("Precio: " + precio + ", descuento: " + descuento + ", total: " + precioConDesc + "<br/>")
+}
+
+calculaDescuento(100,15); // Calcular el precio con descuento de un producto que cuesta 100€ y con un 15% de descuento
+calculaDescuento(200,20);
+
+var otroPrecio = 300;
+var otroDescuento = 10;
+calculaDescuento(otroPrecio, 5);
+calculaDescuento(otroPrecio, otroDescuento);
+
+document.write("<br/><br/><br/>")
+
+// * Tambien se pueden crear variables especificas desde fuera para la funcion
+
+var otroPrecio2 = 1000;
+var otroDescuento2 = 50;
+var precioConDesc2;
+
+function calculaDescuento2() { // Si creamos las variables globales desde fuera no hay que definirlas dentro de los parentesis
+  precioConDesc2 = otroPrecio2 - otroPrecio2 * otroDescuento2 / 100;
+  document.write("Precio: " + otroPrecio2 + ", descuento: " + otroDescuento2 + ", total: " + precioConDesc2 + "<br/>");
+}
+
+function calculaDescuento2(); // Hay que poner algo???
+
+</script>
+
+</html>

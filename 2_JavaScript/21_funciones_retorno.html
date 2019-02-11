@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Funciones con retorno</title>
+</head>
+<body>
+  
+</body>
+
+<script type="text/javascript">
+
+////// Funciones que devuelven un valor
+
+function dameTitulo() {
+  return "Titulo funciones con retorno"; // Return devuelve lo que venga justo despues
+}
+
+document.write("<h1>" + dameTitulo() + "</h1>") // Al llamar a una funcion SIEMPRE hay que poner los parentesis detras, si no se cree que es una variable
+document.write("<h2>" + dameTitulo() + "</h2>")
+
+var tituloWeb = "<h3>" + dameTitulo() + "</h3>";
+
+document.write(tituloWeb)
+
+
+
+////// Otra funcion que devuelve un valor
+
+function dateCabecera(texto, nivel) { // Nivel = h1, h2... 
+  var abreH = "<h" + nivel + ">";
+  var cierraH = "</h" + nivel + ">";
+  return abreH + texto + cierraH;
+}
+
+document.write(dateCabecera("Cabecera nivel 1",1));
+document.write(dateCabecera("Cabecera nivel 2",2));
+document.write(dateCabecera("Cabecera nivel 3",3));
+
+</script>
+
+</html>

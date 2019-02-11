@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body class="clase_body">
+  
+  <h1>Formulario de registro</h1>
+  
+  <form action="7_mini_jquery.html" method="get">
+    <input type="bubmit" value="ENVIAR POR EMAIL"/>
+    <input type="button" value="Generar" onclick="generar();"/>
+    <div id="div_form">DIV</div>
+  </form>
+  
+  <script src="7_mini_jquery.js"></script>
+
+  <!--
+    1 - Crear una funcion elementoPorId(id) que devuelva un elemento por su Id
+      1.1 - Probar la funcion
+        elementoPorId("div_form").style.background-color = "red";
+
+    2 - Crear una funcion cambiaAtribPorId(id, atributo, valor) que modifique el atributo de un elemento buscado por su Id
+      2.1 - Probar la funcion
+        Ej: cambiaAtribPorId("div_form", "style", "background-color:red");
+
+    3 - Crear una funcion adjuntarElementoPorId (id, etiqueta) que genere un elemento tipo "etiqueta" y lo adjunte a un elemento encontrado por Id
+      3.1 - Probar la funcion
+        Ej: adjuntarElementoPorId ("div_form", "input");
+
+    4 - Lo mismo que los 3 anteriores, pero en vez de buscar por su Id busque por clase (devuelve un array de elementos a los que hacer lo que sea)
+  -->
+
+</body>
+</html>

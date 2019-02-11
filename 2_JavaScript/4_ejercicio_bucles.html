@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Bucles</title>
+  <meta charset="utf-8"/>
+</head>
+
+<body>
+  <h1>Bucles</h1>
+
+<script>
+
+/* Mostrar cuenta atrás de 5 a 0 */
+
+//1
+/* Alternando los valores, cambiando < por > y restando */
+var veces=0;
+var contador=5;
+
+while (contador>veces) {
+  alert("Valor de contador es:" + contador);
+  contador=contador-1;
+}
+
+//2
+/* Misma estructura, solo modificando el texto de alerta */
+var veces=5;
+var contador=0;
+
+while (contador<veces) {
+  alert("Valor de contador es:" + (5-contador));
+  contador=contador+1;
+}
+
+//3
+/* Cambio de estructura */
+var veces=5;
+var contador=veces;
+
+while (contador>0) {
+  alert("Valor de contador es:" + contador);
+  contador=contador-1;
+}
+
+
+/* Preguntar al usuario el numero de ciclos */
+
+//1
+var veces=0;
+var contador=prompt("Dime el numero de ciclos"); //Todo lo que va en prompt se interpreta como texto
+var contador=parseFloat(contador); //Convierte los textos a numeros
+
+while (contador>veces) {
+  alert("Ciclo numero = " + contador);
+  contador=contador-1;
+}
+
+//2
+var contador=prompt("Dime el numero de ciclos"); //Todo lo que va en prompt se interpreta como texto
+var contador=parseFloat(contador); //Convierte los textos a numeros
+
+while (contador>0) {
+  alert(contador);
+  contador=contador-1;
+}
+
+
+/* Preguntar al usuario el principio y el final de la cuenta atrás */
+
+//1
+var contador=prompt("Dime el numero inicial de la cuenta atrás");
+var contador=parseFloat(contador); //Convierte los textos a numeros
+
+var veces=prompt("Dime el numero de final de la cuenta atrás");
+var veces=parseFloat(veces); //Convierte los textos a numeros
+
+while (contador>veces) {
+  alert("Valores: numero de final de la cuenta atrás = " + veces + "; contador = " + contador);
+  contador=contador-1;
+}
+
+
+/* Preguntar al usuario el principio y el final de la cuenta independientemente de que sea hacia delante o atras */
+
+//1
+var contador=prompt("Dime el numero inicial");
+var contador=parseFloat(contador); //Convierte los textos a numeros
+
+var veces=prompt("Dime el numero de final");
+var veces=parseFloat(veces); //Convierte los textos a numeros
+
+while (contador>veces) {
+  alert("Ciclo numero = " + contador);
+  contador=contador-1;
+}
+while (contador<=veces) {
+  alert("Ciclo numero = " + contador);
+  contador=contador+1;
+}
+
+//2
+var inicio=prompt("Indique el inicio");
+var inicio=parseFloat(inicio);
+
+var fin=prompt("Indique el final");
+var fin=parseFloat(fin);
+
+var contador=inicio; // Aunque sea igual, si hace algo diferente es mejor cambiarle el nombre para tener claro cual es su funcion
+
+if (inicio<=fin) {
+  while (contador<fin)
+  {
+    alert(contador);
+    contador=contador+1;
+  }
+}
+else {
+  while (contador>fin)
+  {
+    alert(contador);
+    contador=contador-1;
+  }
+}
+
+
+</script>
+
+</body>
+
+</html>

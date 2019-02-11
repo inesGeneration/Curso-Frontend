@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+<div id="formFecha"></div><br/>
+<input type="button" id="boton" value="Enviar" onclick="escribirFecha();"><br/><br/>
+<div id="resultado"></div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+  /*  Crear campos de fecha (FechaDom) a partir de la fecha de cumpleaños.
+      Pensar como mejorar este "Control":
+        - Añadir etiquetas a los campos.
+        - Como hacer para obtener dia, mes... con los métodos getDia(), etc...*/
+ 
+  /* Esto podría sustituir al onclic del input y a la función de mostrarlo que yo cree
+  $(document).ready(function(){
+      $("#boton").click(function() {
+        alert(inputDiaUsuario.getFecha());
+      })
+    }
+  );
+  */ 
+  
+
+  class FechaDom {
+    constructor (dia, mes, anio, id) {
+      this.fechaId = id;
+      $("#formFecha").append(`Día: <input id="${id}input_fecha" type="text" value=""/>
+                              Mes: <input id="${id}input_mes" type="text" value=""/>
+                              Año: <input id="${id}input_anio" type="text" value=""/><br/>`);
+    }
+    getFecha() {
+      var fechaUsuario = parseInt($(`#${this.fechaId}input_fecha`).val());
+      return fechaUsuario;
+    }
+    getMes() {
+      var mesUsuario = parseInt($(`#${this.fechaId}input_mes`).val());
+      return mesUsuario;
+    }
+    getAnio() {
+      var anioUsuario = parseInt($(`#${this.fechaId}input_anio`).val());
+      return anioUsuario;
+    }
+  }
+
+  var inputDiaUsuario = new FechaDom(32,34,4234,"fecha1");
+
+  function escribirFecha() {
+    $("#resultado").append(`Día: ${inputDiaUsuario.getFecha()} <br/>`);
+    $("#resultado").append(`Día: ${inputDiaUsuario.getMes()} <br/>`);
+    $("#resultado").append(`Día: ${inputDiaUsuario.getAnio()} <br/>`);
+  }
+
+</script>
+</body>
+</html>

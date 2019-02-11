@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Elementos DOM del siguiente DIV</h1>
+  <div id="un_div" style="background-color: aliceblue">
+      <p>Un texto</p>
+      <table id="tabla_paises">
+        <tr>
+            <td>Ciudad</td>
+            <td>País</td>
+        </tr>
+        <tr>
+            <td>Madrid</td>
+            <td>España</td>
+        </tr>
+        <tr>
+            <td>Lisboa</td>
+            <td>Portugal</td>
+        </tr>
+      </table>
+  </div>
+</body>
+<script>
+  // document. es el objeto/nodo tipo DOM del HTML
+
+  var unDiv = document.getElementById("un_div"); 
+  var nodoH2 = document.createElement("h2");
+  var textoEnH2 = document.createTextNode("Un subtitulo añadido por JS");
+  
+  nodoH2.appendChild(textoEnH2);
+  unDiv.appendChild(nodoH2);
+
+  // Otra manera de escribirlo seria (REVISAR porque no funciona)
+  /*
+  document.getElementById("un_div").appendChild(document.createElement("h2").appendChild(ocument.createTextNode("Un subtitulo añadido por JS")));
+  */
+
+  unDiv.setAttribute("style", "background-color: yellow");
+
+  document.getElementsByTagName ("p") [0]
+    .appendChild(document.createTextNode(" TEXTO APPEND")); // los corchetes se ponen para hacer referencia al array que crea al buscar Element"s", por lo que auqnue solo tenga un elemento p hay que especificar que es el [0]
+
+</script>
+</html>
